@@ -1,0 +1,44 @@
+<div id="add-product-div">
+    <h2>Add Product</h2> <br>
+    <form method="POST" action="/user/productAdd" enctype="multipart/form-data">
+
+        <label>Product Name</label> <br>
+        <input type="text" name="productName" id="productName"> <br><br>
+
+        <label>Description</label> <br>
+        <textarea type="text" name="description" id="productDescription"></textarea><br><br>
+
+        <label>Price</label> <br>
+        <input type="number" name="price" id="productPrice"> <br><br>
+
+        {{!-- <label>Category</label> <br>
+        <input type="text" name="category" id="productCategory"> <br><br> --}}
+
+        <label>Category</label> <br>
+        <select name="category" id="">
+            <option value="Electronics">Electronics</option>
+            <option value="Office Solutions">Office Solutions</option>
+            <option value="Nutrition">Nutrition</option>
+            <option value="Shoes">Shoes</option>
+            <option value="Books">Books</option>
+            <option value="Beauty & Personal Care">Beauty & Personal Care</option>
+        </select> <br> <br>
+
+        <label>Quantity</label> <br>
+        <input type="number" name="quantity" id="productQuantity"> <br><br>
+
+        <label>Best Seller</label>
+        <select name="bestSeller" id="">
+            <option value="">Choose One</option>
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select> <br><br>
+
+        <label>Upload Product Image</label> <br>
+        <input type="file" name="productImage" id="productImage">
+        <br><br>
+
+        <input class="product-add-button" type="submit" value="Add Product">
+        <button class="product-add-button"><a class="product-add-button" href="/user/dashboard">Cancel</a></button>
+    </form>
+</div>
