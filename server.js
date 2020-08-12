@@ -1,6 +1,4 @@
-// Author : Vladislav Matveev
 
-//----------------
 // .env
 require('dotenv').config({path:"./config/.env"});
 //----------------
