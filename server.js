@@ -89,7 +89,7 @@ mongoose.connect(process.env.MONGO_DB_URL, {useNewUrlParser: true, useUnifiedTop
 //-----------------------------------------------------------------------------------------MongoDB
 
 // Start server
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000 ;
 app.listen(PORT, () => {
     console.log("Web Server is connected!!")
 });
