@@ -63,7 +63,7 @@ const validationCheck = () => {
     //     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     //     const msg = {
     //     to: `${newUserRegistered.email}`,
-    //     from: `vmatveevspam@gmail.com`,
+    //     from: `aurnabislam@gmail.com`,
     //     subject: 'New User Registered',
     //     //text: '',
     //     html: 

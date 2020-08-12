@@ -155,8 +155,8 @@ router.post("/registration", (req, res) => {
             sgMail.setApiKey(process.env.SENDGRID_API_KEY);
             const msg = {
             to: `${user.email}`,
-            from: `vmatveevspam@gmail.com`,
-            subject: 'Welcome to QuickBuy',
+            from: `aurnabislam@gmail.com`,
+            subject: 'myamazon',
             //text: '',
             html: 
             `
