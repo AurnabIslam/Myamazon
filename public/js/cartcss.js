@@ -63,7 +63,7 @@ $(document).ready(function() {
         recalculateCart();
         $(this).fadeIn(fadeTime);
       });
-      //$(this).fadeIn(fadeTime);
+      $(this).fadeIn(fadeTime);
     }); 
   }
 

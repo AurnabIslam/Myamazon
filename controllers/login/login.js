@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-//const dashboardLoader = require('../../middleware/authorization');
+const dashboardLoader = require('../../middleware/authorization');
 
 // Import User Registration Schema
 const userModel = require('../../models/registrationModels');
@@ -25,7 +25,7 @@ router.post("/login", (req, res)=>{
             req.session.userInfo = user;
             console.log(req.session.userInfo);
             res.redirect("user/dashboard");
-            //dashboardLoader(req,res);
+            dashboardLoader(req,res);
         } else {
             // Passwords don't match
             const loginErr = [];

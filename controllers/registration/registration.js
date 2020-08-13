@@ -146,7 +146,7 @@ router.post("/registration", (req, res) => {
 
         user.save()
         .then((user) => {
-            //console.log(`user.save = .then == ${user}`)
+            console.log(`user.save = .then == ${user}`)
             console.log(`User successfully has been inserted into the user collection DB!`);
 
             //SEND EMAIL
@@ -168,8 +168,8 @@ router.post("/registration", (req, res) => {
 
             sgMail.send(msg)
             .then(()=>{
-                //req.session.userInfo = user;
-                //console.log(`${user}`);
+                req.session.userInfo = user;
+                console.log(`${user}`);
                 res.redirect("login");
                 console.log(`Email successfully sent!`);
             })

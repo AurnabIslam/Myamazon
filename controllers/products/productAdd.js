@@ -30,7 +30,7 @@ router.post("/productAdd", isAuthenticated, (req, res) => {
     product.save()
     .then((product) => {
         //-------
-        //req.files.productImage.name = `${product._id}${path.parse(req.files.productImage.name).ext}`;
+        req.files.productImage.name = `${product._id}${path.parse(req.files.productImage.name).ext}`;
         const imageFile = `${product._id}${path.parse(req.files.productImage.name).ext}`;
 
         req.files.productImage.mv(`public/uploads/${imageFile}`)
@@ -39,7 +39,7 @@ router.post("/productAdd", isAuthenticated, (req, res) => {
             productModel.updateOne({ _id : product._id }, { imagePath : imageFile })
             .then(() => {
                 res.redirect('/products/list');
-                //console.log(`Successfully updated product and added productPath`);
+                console.log(`Successfully updated product and added productPath`);
             })
             .catch((err) => {
                 console.log(`Error updating ${err}`);

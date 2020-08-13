@@ -19,7 +19,7 @@ router.get("/add-to-cart/:id", isAuthenticated, (req, res) => {
     .then((product) => {
         cart.add(product, product.id);
         req.session.cart = cart;
-        //console.log(req.session.cart);
+        console.log(req.session.cart);
         res.redirect("/cart");
     })
     .catch(err => console.log(`error adding to cart : ${err}`));
@@ -30,9 +30,9 @@ router.get("/cart", isAuthenticated, (req, res) => {
         return res.render("shoppingCart/cart", {products : null});
     }
     let cart = new Cart(req.session.cart);
-    //cart.item = shows the whole object...but how to access the string
-    //console.log(cart.items);
-    //console.log(cart.items);
+    cart.item = shows the whole object...but how to access the string
+    console.log(cart.items);
+    console.log(cart.items);
 
     res.render("shoppingCart/cart", { 
         products : cart.generateArray(), 
@@ -65,7 +65,7 @@ router.post("/cart", isAuthenticated, (req, res) => {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
     to: `${user.email}`,
-    from: `vmatveevspam@gmail.com`,
+    from: `aurnabislam@gmail.com`,
     subject: 'Your QuickBuy Order has been received!',
     //text: '',
     html: 
@@ -82,7 +82,7 @@ router.post("/cart", isAuthenticated, (req, res) => {
     Shopping: $${submittedForm.cartShipping} <br>
     Total : $${submittedForm.cartTotal} <br><br>
 
-    Thanks for using QuickBuy!
+    Thanks for using Amazon!
     `,
     };
 
