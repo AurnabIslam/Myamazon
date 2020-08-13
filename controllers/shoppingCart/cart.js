@@ -29,10 +29,10 @@ router.get("/cart", isAuthenticated, (req, res) => {
     if (!req.session.cart) {
         return res.render("shoppingCart/cart", {products : null});
     }
-    let cart = new Cart(req.session.cart);
+/*     let cart = new Cart(req.session.cart);
     cart.item = shows the whole object...but how to access the string
     console.log(cart.items);
-    console.log(cart.items);
+    console.log(cart.items); */
 
     res.render("shoppingCart/cart", { 
         products : cart.generateArray(), 
