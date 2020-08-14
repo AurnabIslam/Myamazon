@@ -36,7 +36,7 @@ const validationCheck = () => {
     }
 
 
-     if (signUpErrors.length > 0 || emailExistsError.length > 0) {
+     /* if (signUpErrors.length > 0 || emailExistsError.length > 0) {
         res.render("registration/registration", {
             title : "Registration",
              messages : signUpErrors,
@@ -100,7 +100,7 @@ const validationCheck = () => {
          .catch((err) => {
              console.log(`Error occured when inserting data into the user collection : ${err}`);
          })
-     }
+     } */
 }
 
 module.exports = validationCheck;
