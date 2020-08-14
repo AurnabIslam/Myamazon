@@ -66,7 +66,7 @@ router.post("/cart", isAuthenticated, (req, res) => {
     const msg = {
     to: `${user.email}`,
     from: `aurnabislam@gmail.com`,
-    subject: 'Your QuickBuy Order has been received!',
+    subject: 'Your  Order has been received!',
     //text: '',
     html: 
     `

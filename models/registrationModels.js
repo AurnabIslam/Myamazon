@@ -49,10 +49,6 @@ registrationSchema.pre("save", function(next) {
     .catch(err => console.log(`Error occured when salting ${err}`));
 })
 
-/* 
-    Create a model object. This model object is responsible for
-    performing CRUD operations on the given collection.
-*/
 const userModel = mongoose.model('users', registrationSchema);
 
 module.exports = userModel;
